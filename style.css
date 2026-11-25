@@ -1,0 +1,587 @@
+
+
+Skip to content
+Using Gmail with screen readers
+Enable desktop notifications for Gmail.
+   OK  No thanks
+Conversations
+96% of 30 GB used
+Terms · Privacy · Program Policies
+Last account activity: 6 minutes ago
+Details
+style.css
+100%
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #263238;
+    background: #ffffff;
+}
+
+
+/* ================= NAVBAR ================= */
+
+header {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 25px 0;
+}
+
+.logo {
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffd166;
+}
+
+.nav-btn {
+    text-decoration: none;
+    background: white;
+    color: #176b87;
+
+    padding: 12px 20px;
+    border-radius: 25px;
+
+    font-weight: bold;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.42),
+            rgba(0, 0, 0, 0.42)
+        ),
+        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    color: white;
+}
+
+.small-title {
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 68px;
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #ffd166;
+}
+
+.hero-text {
+    max-width: 560px;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.primary-btn {
+    background: #ffd166;
+    color: #263238;
+}
+
+.secondary-btn {
+    border: 2px solid white;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: white;
+}
+
+
+/* ================= GENERAL SECTIONS ================= */
+
+.destinations,
+.plans,
+.trip-form {
+    padding: 90px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading p {
+    color: #176b87;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.section-heading h2 {
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.section-heading span {
+    color: #777;
+}
+
+
+/* ================= DESTINATIONS ================= */
+
+.destination-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.card-content a {
+    text-decoration: none;
+    color: #176b87;
+    font-weight: bold;
+}
+
+
+/* ================= PLANS ================= */
+
+.plans {
+    background: #f4f9fb;
+}
+
+.plans-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.plan-card {
+    position: relative;
+
+    background: white;
+    padding: 40px 30px;
+
+    border-radius: 20px;
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.plan-card.featured {
+    border: 3px solid #176b87;
+}
+
+.popular {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: #176b87;
+    color: white;
+
+    padding: 7px 18px;
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.plan-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.plan-card h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.days {
+    color: #176b87;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.plan-card p {
+    color: #777;
+    line-height: 1.6;
+}
+
+.plan-card h4 {
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+.plan-card button {
+    border: none;
+    background: #176b87;
+    color: white;
+
+    padding: 12px 30px;
+    border-radius: 25px;
+
+    cursor: pointer;
+}
+
+.plan-card button:hover {
+    background: #0d526a;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    padding: 90px 7%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+.about-content h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.about-content > p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.features > div {
+    display: flex;
+    gap: 15px;
+}
+
+.features span {
+    font-size: 30px;
+}
+
+.features h3 {
+    margin-bottom: 5px;
+}
+
+.features p {
+    color: #777;
+}
+
+
+/* ================= FORM ================= */
+
+.trip-form {
+    background: #f4f9fb;
+}
+
+form {
+    max-width: 800px;
+    margin: auto;
+
+    background: white;
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    font-size: 15px;
+}
+
+.input-group textarea {
+    height: 120px;
+    resize: none;
+}
+
+.submit-btn {
+    width: 100%;
+
+    border: none;
+    background: #176b87;
+    color: white;
+
+    padding: 15px;
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #0d526a;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+    margin: 80px 7%;
+    padding: 60px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(23, 107, 135, 0.95),
+            rgba(23, 107, 135, 0.75)
+        ),
+        url("https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1500&q=80");
+
+    background-size: cover;
+
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact h2 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.contact-btn {
+    background: white;
+    color: #176b87;
+
+    padding: 15px 30px;
+    border-radius: 30px;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #17252a;
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+.footer-logo {
+    font-size: 27px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #aaa;
+    margin: 10px 0;
+}
+
+.social {
+    margin: 25px 0;
+}
+
+.copyright {
+    font-size: 13px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .destination-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .plans-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 220px;
+    }
+
+    .contact {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+}
+Displaying index.html.
